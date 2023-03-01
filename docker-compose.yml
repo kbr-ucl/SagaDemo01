@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  mssql:
+    container_name: dev-mssql
+    #hostname: mssql
+    image: mcr.microsoft.com/mssql/server:latest
+    user: root
+    ports:
+      - "11433:1433"
+    environment:
+      MSSQL_SA_PASSWORD: "MTsample1"
+      ACCEPT_EULA: "Y"
+      MSSQL_RPC_PORT: 135
+# docker run  --env=SA_PASSWORD=MTsample1 --env=ACCEPT_EULA=Y --env=MSSQL_RPC_PORT=135 -p 11433:1433 -d mcr.microsoft.com/mssql/server:latest      
+  rabbitmq:
+    container_name: dev-rabbitmq
+    hostname: rabbit
+    image: masstransit/rabbitmq:latest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
