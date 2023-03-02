@@ -3,7 +3,7 @@ Sample Batch
 
 This is a fork of: https://github.com/MassTransit/Sample-Batch
 
-The code is located at: https://github.com/kbr-ucl/SampleBatch
+The code is located at: https://github.com/kbr-ucl/SagaDemo01
 
 This sample will show a variety of built in tools and techniques in MassTransit.
 
